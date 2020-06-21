@@ -27,9 +27,11 @@ public class LPSimConfig {
     "data/structures/dome_render_6_5_Dome_EDGES.json",
     "data/structures/dome_render_6_5_Left_Stack_FACES.json" };
   public float[] screencapBounds; // = new float[]{ 0, 0, 1, 1 };
-  public String activeMovie = "data/media/Steamed Hams.mp4";
+  // public String activeMovie;
+  public String activeMovie = "Steamed Hams.mp4";
   public float movieVolume = 0.f;
-  public String activeImage; // = "data/media/test_broadcast.jpg";
+  public String activeImage;
+  // public String activeImage = "test_broadcast.jpg";
 
   public LPSimConfig() {
   }
