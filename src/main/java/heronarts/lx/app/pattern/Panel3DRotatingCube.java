@@ -115,7 +115,7 @@ public class Panel3DRotatingCube extends Panel3DGraphicsPattern {
     pg.stroke(LXColor.WHITE);
     pg.translate(xOffset * model.width, yOffset * model.height, zOffset * Math.max(model.width, model.height));
     pg.applyMatrix(new PMatrix3D(
-      1.f, -0.5f, 0.f, 0.f,
+      1.f, 0.f, 0.f, 0.f,
       0.f, 1.f, 0.f, 0.f,
       0.f, 0.f, 1.f, 0.f,
       0.f, 0.f, 0.f, 1.f

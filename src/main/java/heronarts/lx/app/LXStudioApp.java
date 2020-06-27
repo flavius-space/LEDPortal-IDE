@@ -70,7 +70,7 @@ public class LXStudioApp extends PApplet implements LXPlugin {
 
   // TODO: get these from config
   public final String SERIAL_PORT = "/dev/tty.usbserial-AD025M69";
-  public final String OPC_HOST = "192.168.1.20";
+  public final String OPC_HOST = "192.168.1.112";
   public final int OPC_PORT = 42069;
   public final byte OPC_CHANNEL = 0;
   public final int APA102_CLOCK_CHANNEL = 7;
@@ -154,6 +154,7 @@ public class LXStudioApp extends PApplet implements LXPlugin {
     } catch (IOException e) {
       logger.severe(String.format("could not get mediaPrefix: %s", e.toString()));
     }
+    mediaPrefix = "/Users/vanbujm/Projects/LEDPortal-IDE/Content/media/";
     // logger.info(String.format("mediaPrefix: %s", mediaPrefix));
     if (config.activeImage != null) {
       videoFrame = loadImage(mediaPrefix + config.activeImage);
@@ -203,8 +204,8 @@ public class LXStudioApp extends PApplet implements LXPlugin {
     ui.setCoordinateSystem(CoordinateSystem.valueOf("RIGHT_HANDED"));
     LXModel model = lx.getModel();
 
-    Serial serialPort = new Serial(this, SERIAL_PORT,
-      PBExpanderOutput.BAUD_RATE);
+//    Serial serialPort = new Serial(this, SERIAL_PORT,
+//      PBExpanderOutput.BAUD_RATE);
 
     try {
       // TODO: Get model geometry from config

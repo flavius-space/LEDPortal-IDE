@@ -50,6 +50,7 @@ public class Panel3DGraphicsPattern extends LXModelPattern<LPPanelModel> {
     } catch (IOException e) {
       logger.severe(String.format("could not get fontPrefix: %s", e.toString()));
     }
+    fontPrefix = "/Users/vanbujm/Projects/LEDPortal-IDE/Content/fonts/";;
     font = applet.createFont(fontPrefix + "uni0553-webfont.ttf", 8);
 
     renderTask = new LXLoopTask() {
