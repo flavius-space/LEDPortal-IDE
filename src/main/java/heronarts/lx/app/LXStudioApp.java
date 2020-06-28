@@ -70,7 +70,7 @@ public class LXStudioApp extends PApplet implements LXPlugin {
 
   // TODO: get these from config
   public final String SERIAL_PORT = "/dev/tty.usbserial-AD025M69";
-  public final String OPC_HOST = "192.168.1.112";
+  public final String OPC_HOST = "192.168.1.62";
   public final int OPC_PORT = 42069;
   public final byte OPC_CHANNEL = 0;
   public final int APA102_CLOCK_CHANNEL = 7;
