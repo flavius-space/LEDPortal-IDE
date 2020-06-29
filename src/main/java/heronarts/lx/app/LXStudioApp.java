@@ -76,6 +76,7 @@ public class LXStudioApp extends PApplet implements LXPlugin {
   public final String SERIAL_PORT = "/dev/tty.usbserial-AD025M69";
   public final String OPC_HOST = "192.168.1.62";
   public final int OPC_PORT = 42069;
+  public final int OPC_NUM_CHANNELS = 3;
   public final byte OPC_CHANNEL = 0;
   public final int APA102_CLOCK_CHANNEL = 7;
   public final int APA102_FREQ = 800000;
@@ -231,10 +232,9 @@ public class LXStudioApp extends PApplet implements LXPlugin {
 
       // output.addAPA102ClockChannel(APA102_CLOCK_CHANNEL, APA102_FREQ);
 
-      int numChannels = 3;
-      int pointsPerChannel = (int) Math.floor((double) nPoints / numChannels);
-      int[][] indexBuffers = new int[numChannels][pointsPerChannel];
-      for(int i = 0; i < numChannels; i++) {
+      int pointsPerChannel = (int) Math.floor((double) nPoints / OPC_NUM_CHANNELS);
+      int[][] indexBuffers = new int[OPC_NUM_CHANNELS][pointsPerChannel];
+      for(int i = 0; i < OPC_NUM_CHANNELS; i++) {
         int[] indexBuffer = new int[pointsPerChannel];
         for (int j = 0; j < pointsPerChannel; j++) {
           indexBuffer[j] = pointIndex;
@@ -244,12 +244,11 @@ public class LXStudioApp extends PApplet implements LXPlugin {
         }
         indexBuffers[i] = indexBuffer;
       }
-      for(int i = 0; i < numChannels; i++) {
+      for(int i = 0; i < OPC_NUM_CHANNELS; i++) {
         OPCOutput output = new OPCOutput(lx, indexBuffers[i], OPC_HOST, OPC_PORT);
         output.setChannel((byte) i);
         lx.addOutput(output);
       }
-
     } catch (Exception x) {
       x.printStackTrace();
     }
