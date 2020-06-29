@@ -1,13 +1,13 @@
 /**
  * Copyright 2020- Mark C. Slee, Heron Arts LLC
- *
+ * <p>
  * This file is part of the LX Studio software library. By using
  * LX, you agree to the terms of the LX Studio Software License
  * and Distribution Agreement, available at: http://lx.studio/license
- *
+ * <p>
  * Please note that the LX license is not open-source. The license
  * allows for free, non-commercial use.
- *
+ * <p>
  * HERON ARTS MAKES NO WARRANTY, EXPRESS, IMPLIED, STATUTORY, OR
  * OTHERWISE, AND SPECIFICALLY DISCLAIMS ANY WARRANTY OF
  * MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR
@@ -19,6 +19,7 @@
 package heronarts.lx.app;
 
 // import heronarts.lx.output.OPCOutput;
+
 import flavius.ledportal.LPMeshable;
 import flavius.ledportal.LPSimConfig;
 import flavius.ledportal.LPStructure;
@@ -37,6 +38,7 @@ import heronarts.lx.model.LXModel;
 import heronarts.lx.output.OPCOutput;
 import heronarts.lx.studio.LXStudio;
 import heronarts.p3lx.ui.UI.CoordinateSystem;
+
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;
@@ -45,8 +47,10 @@ import java.awt.Robot;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Logger;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PMatrix3D;
@@ -227,14 +231,25 @@ public class LXStudioApp extends PApplet implements LXPlugin {
 
       // output.addAPA102ClockChannel(APA102_CLOCK_CHANNEL, APA102_FREQ);
 
-      int[] indexBuffer = new int[nPoints];
-      for (int i = 0; i < nPoints; i++) {
-      indexBuffer[i] = pointIndex;
-      if (pointIndex < model.size - 1) pointIndex++;
+      int numChannels = 3;
+      int pointsPerChannel = (int) Math.floor((double) nPoints / numChannels);
+      int[][] indexBuffers = new int[numChannels][pointsPerChannel];
+      for(int i = 0; i < numChannels; i++) {
+        int[] indexBuffer = new int[pointsPerChannel];
+        for (int j = 0; j < pointsPerChannel; j++) {
+          indexBuffer[j] = pointIndex;
+          if (pointIndex < model.size - 1) {
+            pointIndex++;
+          }
+        }
+        indexBuffers[i] = indexBuffer;
       }
-      OPCOutput output = new OPCOutput(lx, indexBuffer, OPC_HOST, OPC_PORT);
+      for(int i = 0; i < numChannels; i++) {
+        OPCOutput output = new OPCOutput(lx, indexBuffers[i], OPC_HOST, OPC_PORT);
+        output.setChannel((byte) i);
+        lx.addOutput(output);
+      }
 
-      lx.addOutput(output);
     } catch (Exception x) {
       x.printStackTrace();
     }
@@ -266,13 +281,13 @@ public class LXStudioApp extends PApplet implements LXPlugin {
     List<float[]> vertexUVPairs = new ArrayList<float[]>();
 
     vertexUVPairs
-      .add(new float[] { flatBounds[0][0], flatBounds[1][0], 0, 0, 0 });
-    vertexUVPairs.add(new float[] { flatBounds[0][1], flatBounds[1][0], 0,
-      videoFrame.width, 0 });
-    vertexUVPairs.add(new float[] { flatBounds[0][1], flatBounds[1][1], 0,
-      videoFrame.width, videoFrame.height });
-    vertexUVPairs.add(new float[] { flatBounds[0][0], flatBounds[1][1], 0, 0,
-      videoFrame.height });
+      .add(new float[]{flatBounds[0][0], flatBounds[1][0], 0, 0, 0});
+    vertexUVPairs.add(new float[]{flatBounds[0][1], flatBounds[1][0], 0,
+      videoFrame.width, 0});
+    vertexUVPairs.add(new float[]{flatBounds[0][1], flatBounds[1][1], 0,
+      videoFrame.width, videoFrame.height});
+    vertexUVPairs.add(new float[]{flatBounds[0][0], flatBounds[1][1], 0, 0,
+      videoFrame.height});
     for (float[] vertexUVPair : vertexUVPairs) {
       PVector uvPosition = new PVector(vertexUVPair[0], vertexUVPair[1],
         vertexUVPair[2]);
