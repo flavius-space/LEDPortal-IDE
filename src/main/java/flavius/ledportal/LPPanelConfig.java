@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import processing.core.PMatrix3D;
 import processing.core.PVector;
 import processing.data.JSONArray;
 import processing.data.JSONObject;
@@ -41,10 +40,6 @@ public class LPPanelConfig extends LPMeshable {
   }
 
   public LPPanelModel getModel() {
-    List<PMatrix3D> matrices = new ArrayList<PMatrix3D>();
-    matrices.add(worldToUI);
-    matrices.add(matrix);
-    return new LPPanelModel(composeMatrices(matrices), leds);
+    return new LPPanelModel(getUIMatrix(), leds);
   }
-
 }
