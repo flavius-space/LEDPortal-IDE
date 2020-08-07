@@ -85,9 +85,15 @@ public class PBCRC {
   }
 
   public void updateBytes(byte[] bytes, int start, int end) {
+    String logMessage = "";
+    for(byte b: bytes) {
+      logMessage += String.format("%02x", b);
+    }
+    logger.fine(String.format("crc: %d, bytes: %s, start: %d, end: %d", crc, logMessage, start, end));
     for (int i = start; i < end; i++) {
       this.updateByte(bytes[i]);
     }
+    logger.fine(String.format("crc: %d", crc));
   }
 
   public void updateBytes(byte[] bytes) {
