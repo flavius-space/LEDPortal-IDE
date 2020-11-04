@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="LXStudio-IDE:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b53662c9-1ef9-4ea2-8bd1-c53ab4f41a91" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/LXStudio-IDE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LXStudio-IDE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/flavius/ledportal/LPSimConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/flavius/ledportal/LPSimConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="dlm1agpr" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dtRLvZDvEdfgtLLenWGDrCi6qj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LXStudioApp">
+    <configuration name="PackageJar" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="heronarts.lx.app.LXStudioApp" />
+      <module name="LXStudio-IDE" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="assembly:single" />
+      </method>
+    </configuration>
+    <configuration name="LXStudio-IDE.jar" type="JarApplication" temporary="true">
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
+      <option name="JAR_PATH" value="$PROJECT_DIR$/classes/artifacts/LXStudio_IDE_jar/LXStudio-IDE.jar" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ServiceCreate.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/ServiceCreate.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lxstudio-ide-0.2.1-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/lxstudio-ide-0.2.1-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lxstudio-ide-0.2.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/lxstudio-ide-0.2.1-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.PackageJar" />
+      <item itemvalue="Application.LXStudioApp" />
+      <item itemvalue="JAR Application.lxstudio-ide-0.2.1-SNAPSHOT-jar-with-dependencies.jar" />
+      <item itemvalue="JAR Application.lxstudio-ide-0.2.1-SNAPSHOT.jar" />
+      <item itemvalue="JAR Application.LXStudio-IDE.jar" />
+      <item itemvalue="JAR Application.ServiceCreate.jar" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.LXStudio-IDE.jar" />
+        <item itemvalue="JAR Application.lxstudio-ide-0.2.1-SNAPSHOT-jar-with-dependencies.jar" />
+        <item itemvalue="JAR Application.ServiceCreate.jar" />
+        <item itemvalue="JAR Application.lxstudio-ide-0.2.1-SNAPSHOT.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b53662c9-1ef9-4ea2-8bd1-c53ab4f41a91" name="Default Changelist" comment="" />
+      <created>1593242350094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593242350094</updated>
+      <workItem from="1593242353450" duration="15618000" />
+      <workItem from="1593419443570" duration="5014000" />
+      <workItem from="1593482228315" duration="556000" />
+      <workItem from="1593601597433" duration="615000" />
+      <workItem from="1593691417388" duration="549000" />
+      <workItem from="1594119324067" duration="627000" />
+      <workItem from="1594208407359" duration="1446000" />
+      <workItem from="1594449865600" duration="2292000" />
+      <workItem from="1599043080869" duration="618000" />
+      <workItem from="1601795392864" duration="786000" />
+      <workItem from="1602859193006" duration="771000" />
+      <workItem from="1604161581880" duration="1109000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1876" height="444" key="GridCell.Tab.0.bottom" timestamp="1604277783101">
+      <screen x="0" y="23" width="1920" height="1102" />
+    </state>
+    <state width="1876" height="444" key="GridCell.Tab.0.bottom/0.23.1920.1102@0.0.1920.1200" timestamp="1599095382321" />
+    <state width="1876" height="444" key="GridCell.Tab.0.bottom/0.23.1920.1102@0.23.1920.1102" timestamp="1604277783101" />
+    <state width="1876" height="444" key="GridCell.Tab.0.center" timestamp="1604277783100">
+      <screen x="0" y="23" width="1920" height="1102" />
+    </state>
+    <state width="1876" height="444" key="GridCell.Tab.0.center/0.23.1920.1102@0.0.1920.1200" timestamp="1599095382320" />
+    <state width="1876" height="444" key="GridCell.Tab.0.center/0.23.1920.1102@0.23.1920.1102" timestamp="1604277783100" />
+    <state width="1876" height="444" key="GridCell.Tab.0.left" timestamp="1604277783100">
+      <screen x="0" y="23" width="1920" height="1102" />
+    </state>
+    <state width="1876" height="444" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1599095381915" />
+    <state width="1876" height="444" key="GridCell.Tab.0.left/0.23.1920.1102@0.0.1920.1200" timestamp="1599095382320" />
+    <state width="1876" height="444" key="GridCell.Tab.0.left/0.23.1920.1102@0.23.1920.1102" timestamp="1604277783100" />
+    <state width="1876" height="444" key="GridCell.Tab.0.right" timestamp="1604277783101">
+      <screen x="0" y="23" width="1920" height="1102" />
+    </state>
+    <state width="1876" height="444" key="GridCell.Tab.0.right/0.23.1920.1102@0.0.1920.1200" timestamp="1599095382321" />
+    <state width="1876" height="444" key="GridCell.Tab.0.right/0.23.1920.1102@0.23.1920.1102" timestamp="1604277783101" />
+    <state x="548" y="324" key="IDE.errors.dialog" timestamp="1601795516346">
+      <screen x="0" y="23" width="1920" height="1102" />
+    </state>
+    <state x="548" y="324" key="IDE.errors.dialog/0.23.1920.1102@0.23.1920.1102" timestamp="1601795516346" />
+  </component>
+</project>
