@@ -28,7 +28,7 @@ public class LPSimConfig {
   };
   public float[] screencapBounds; // = new float[]{ 0, 0, 1, 1 };
   public String activeMovie;
-  // public String activeMovie = "Steamed Hams.mp4";
+//   public String activeMovie = "Steamed Hams.mp4";
   public float movieVolume = 0.f;
   public String activeImage;
   // public String activeImage = "test_broadcast.jpg";
